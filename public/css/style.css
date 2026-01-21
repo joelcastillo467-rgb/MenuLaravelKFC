@@ -1,0 +1,77 @@
+:root {
+    --kfc-red: #E4002B;
+    --dark: #000000;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+}
+
+body {
+    font-family: 'Arial Black', sans-serif;
+    background-color: var(--gray);
+    margin: 0;
+}
+
+.navbar {
+    background: var(--kfc-red);
+    padding: 1rem 5%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de Menú */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+}
+
+/* Tarjetas de Plato */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:active {
+    border-color: var(--kfc-red);
+    transform: scale(0.98);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.price {
+    color: var(--kfc-red);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-kfc {
+    background: var(--kfc-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
